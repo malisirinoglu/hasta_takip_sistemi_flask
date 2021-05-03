@@ -2,6 +2,7 @@
 
 # FLASK İLE HASTA TAKİP UYGULAMASI
 ![](http://i.imgur.com/wiuP3Jy.gif)
+![](http://i.imgur.com/Ssfp7.gif)
 ## Flask ile hasta takip uygulaması nedir ?
 
 Bu uygulama her bir tekil kullanıcının hastalarının isim,soyisim,yaş,tanı v.b. gibi durumlarını kayıt altında tutması ve kontrol etmesi için flask kullanılarak yazılmıştır.
