@@ -24,5 +24,5 @@ http://127.0.0.1:5000/login adresini kullanarak siteye erişebilirsiniz.
 - Şifre: admin
 ##### ( Admin hesabı değildir farklı kullanıcılar oluşturulduğunda onların hastalarını görüntüleyemez veya düzenleyemez sistemde herhangi bir admin paneli bulunmamaktadır. )
 
-#### Kayıt sayfası şuan için bulunmamaktadır. Dileyen main.db içerisinde bulunan users tablosuna SQL sorugusu ile kullanıcı ekleyebilir. 
+#### Kayıt sayfası şuan için bulunmamaktadır. Dileyen main.db içerisinde bulunan users tablosuna SQL sorgusu ile kullanıcı ekleyebilir. 
 #### Yakın zamanda pythonanwhere ile siteyi ayağa kaldırabilirim.
