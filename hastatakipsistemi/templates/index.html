@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% with result = result %}
+<h1>{{result}}</h1>
+{% include "includes/map.html" %}
+{% endwith %}
+
+
+{% endblock body %}

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block body  %}
+
+{% if patients != [] %}
+
+<!-- <form action="/search" method = "post">
+    <input type="text" name = "keyword" class="input-sm" maxlength="64" placeholder="Ara...">
+<button type="submit" class="btn btn-danger">Ara</button> -->
+<td><a href ="/patients/{{id}}/add-patient" class = "btn btn-primary">Hasta Ekle -{{id}}- </a></td>
+</form>
+<hr>
+
+<table style="text-align: center;" class="table table-bordered ">
+  <thead style="background-color: #007BFF; color: white;">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">İsim</th>
+      <th scope="col">Soyisim</th>
+      <th scope="col">Hasta Tanısı</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for patient in patients %}
+    <tr>
+      <th scope="row">{{patient.Id}}</th>
+      <td>{{patient.name}}</td>
+      <td>{{patient.lastname}}</td>
+      <td>{{patient.diagnosisName}}</td>
+      <td><a href ="/patients/{{id}}/{{patient.Id}}" class = "btn btn-primary">Hastayı Görüntüle</a></td>
+      <td><a href="/delete/{{patient.Id}}" class="btn btn-danger">Hastayı Sil</a></td>
+      </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+
+{% else %}
+
+<div class = "alert alert-danger"> Bu ilde henüz hastanız bulunmuyor. </div>
+<td><a href ="/patients/{{id}}/add-patient" class = "btn btn-primary">Hasta Ekle -{{id}}-</a></td>
+
+{% endif %}
+
+{% endblock  %}

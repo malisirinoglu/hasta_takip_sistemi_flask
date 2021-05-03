@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% if patient != None %}
+
+<ul class="list-group list-group-flush">
+  <li class="list-group-item active">HASTA BİLGİLERİ</li>
+  <li class="list-group-item"> Takibe Başlangıç Tarihi: {{patient.trackDate}}</li>
+  <li class="list-group-item"> Hasta Id: {{ patient.Id}}</li>
+  <li class="list-group-item"> Hasta Adı: {{ patient.name}}</li>
+  <li class="list-group-item"> Hasta Soyadı: {{ patient.lastname}}</li>
+  <li class="list-group-item"> Hasta Telefonu: {{ patient.phonenumber}}</li>
+  <li class="list-group-item"> Hasta Email: {{ patient.email}}</li>
+  <li class="list-group-item"> Hasta Yaşı: {{ patient.age}}</li>
+  <li class="list-group-item"> Hasta Cinsiyet: {{ patient.gender}}</li>
+  <li class="list-group-item"> Hasta Şehir: {{ patient.provienceId}}</li>
+ 
+  {% if patient.diagnosis|safe != "" %}
+  <hr>
+  <li class="list-group-item active"> Hasta Tanısı: {{ patient.diagnosisName}} </li>
+  <li class="list-group-item"> {{ patient.diagnosis|safe}}  </li>
+  <br>
+  {% else %}
+  <li class="list-group-item"> Hasta Tanısı: {{ patient.diagnosisName}} </li>
+  <br>
+  {% endif %}
+</ul>
+
+<a href="/delete/{{patient.Id}}" class="btn btn-danger">Hastayı Sil</a>
+<a href="/edit/{{patient.Id}}" class="btn btn-success">Hastayı Güncelle</a></td>
+</div>
+
+{% else %}
+
+<div class="alert alert-warning">Böyle bir hasta bulunmuyor...</div>
+
+
+
+
+{% endif %}
+
+
+
+{% endblock body %}
+

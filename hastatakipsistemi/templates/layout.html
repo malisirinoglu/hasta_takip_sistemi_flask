@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="{{ url_for('static', filename='js/jquery-3.5.1.slim.js') }}"></script>
+  <script src="{{ url_for('static', filename='ckeditor/ckeditor.js') }}"></script>
+  <link href={{ url_for('static', filename='css/bootstrap.min.css' ) }} rel="stylesheet" />
+  <link href={{ url_for('static', filename='css/bootstrap4-toggle.min.css' ) }} rel="stylesheet" />
+  <script src="{{ url_for('static', filename='js/bootstrap4-toggle.min.js') }}"></script>
+  <link href={{ url_for('static', filename='css/font.css' ) }} rel="stylesheet" type="text/css">
+  <!-- SVG Türkiye Haritası -->
+  <link href={{ url_for('static', filename='css/svg-turkiye-haritasi.css' ) }} rel="stylesheet" />
+  <link href={{ url_for('static', filename='favicon.ico' ) }} rel="shortcut icon" />
+  
+  <title>HASTA TAKİP SİSTEMİ</title>
+  
+  <style>
+    body{
+      background-color: rgba(128, 128, 128, 0.514)
+    }
+  </style>
+</head>
+
+<body>
+
+  {% include "includes/navbar.html" %}
+  <br><br><br><br>
+  <div class="container">
+
+    {% include "includes/messages.html" %}
+
+    {% block body %}
+
+    {% endblock %}
+
+  </div>
+
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  
+  <script>
+    CKEDITOR.replace( 'content', {
+    allowedContent: true,
+    extraPlugins: 'filebrowser',
+    filebrowserUploadUrl:'/upload'
+} );
+    
+    
+</script>
+
+  <!-- SVG Türkiye Haritası -->
+  <script src="{{ url_for('static', filename='js/svg-turkiye-haritasi.js') }}"></script>
+  <script>
+    svgturkiyeharitasi();
+  </script>
+
+  <!-- Font Awesome JS -->
+  <script src="{{ url_for('static', filename='js/fontawesomesolid.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/fontawesome.js') }}"></script>
+
+</body>
+</html>

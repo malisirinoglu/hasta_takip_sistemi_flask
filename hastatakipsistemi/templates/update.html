@@ -1,0 +1,159 @@
+{% extends "layout.html" %}
+{% block body %}
+{% set selected="selected" %}
+
+<ul class="list-group">
+    <li class="list-group-item active">HASTA Güncelleme -{{id}}- </li>
+    
+  </ul>
+  <hr>
+  <form action="/edit/{{id}}" method="post" value="{{id}}">
+  <div class="form-group">
+    <label>Hasta İli </label>
+    <select name='id' class="form-control" required>
+      <option {% if   provienceId == 1  %}  {{ selected }} {% endif %} value=1>Adana</option>
+      <option {% if   provienceId == 2  %}  {{ selected }} {% endif %} value=2>Adıyaman</option>
+      <option {% if   provienceId == 3  %}  {{ selected }} {% endif %} value=3>Afyonkarahisar</option>
+      <option {% if   provienceId == 4  %}  {{ selected }} {% endif %} value=4>Ağrı</option>
+      <option {% if   provienceId == 5  %}  {{ selected }} {% endif %} value=5>Amasya</option>
+      <option {% if   provienceId == 6  %}  {{ selected }} {% endif %} value=6>Ankara</option>
+      <option {% if   provienceId == 7  %}  {{ selected }} {% endif %} value=7>Antalya</option>
+      <option {% if   provienceId == 8  %}  {{ selected }} {% endif %} value=8>Artvin</option>
+      <option {% if   provienceId == 9  %}  {{ selected }} {% endif %} value=9>Aydın</option>
+      <option {% if   provienceId == 10  %}  {{ selected }} {% endif %} value=10>Balıkesir</option>
+      <option {% if   provienceId == 11  %}  {{ selected }} {% endif %} value=11>Bilecik</option>
+      <option {% if   provienceId == 12  %}  {{ selected }} {% endif %} value=12>Bingöl</option>
+      <option {% if   provienceId == 13  %}  {{ selected }} {% endif %} value=13>Bitlis</option>
+      <option {% if   provienceId == 14  %}  {{ selected }} {% endif %} value=14>Bolu</option>
+      <option {% if   provienceId == 15  %}  {{ selected }} {% endif %} value=15>Burdur</option>
+      <option {% if   provienceId == 16  %}  {{ selected }} {% endif %} value=16>Bursa</option>
+      <option {% if   provienceId == 17  %}  {{ selected }} {% endif %} value=17>Çanakkale</option>
+      <option {% if   provienceId == 18  %}  {{ selected }} {% endif %} value=18>Çankırı</option>
+      <option {% if   provienceId == 19  %}  {{ selected }} {% endif %} value=19>Çorum</option>
+      <option {% if   provienceId == 20  %}  {{ selected }} {% endif %} value=20>Denizli</option>
+      <option {% if   provienceId == 21  %}  {{ selected }} {% endif %} value=21>Diyarbakır</option>
+      <option {% if   provienceId == 22  %}  {{ selected }} {% endif %} value=22>Edirne</option>
+      <option {% if   provienceId == 23  %}  {{ selected }} {% endif %} value=23>Elazığ</option>
+      <option {% if   provienceId == 24  %}  {{ selected }} {% endif %} value=24>Erzincan</option>
+      <option {% if   provienceId == 25  %}  {{ selected }} {% endif %} value=25>Erzurum</option>
+      <option {% if   provienceId == 26  %}  {{ selected }} {% endif %} value=26>Eskişehir</option>
+      <option {% if   provienceId == 27  %}  {{ selected }} {% endif %} value=27>Gaziantep</option>
+      <option {% if   provienceId == 28  %}  {{ selected }} {% endif %} value=28>Giresun</option>
+      <option {% if   provienceId == 29  %}  {{ selected }} {% endif %} value=29>Gümüşhane</option>
+      <option {% if   provienceId == 30  %}  {{ selected }} {% endif %} value=30>Hakkâri</option>
+      <option {% if   provienceId == 31  %}  {{ selected }} {% endif %} value=31>Hatay</option>
+      <option {% if   provienceId == 32  %}  {{ selected }} {% endif %} value=32>Isparta</option>
+      <option {% if   provienceId == 33  %}  {{ selected }} {% endif %} value=33>Mersin</option>
+      <option {% if   provienceId == 34  %}  {{ selected }} {% endif %} value=34>İstanbul</option>
+      <option {% if   provienceId == 35  %}  {{ selected }} {% endif %} value=35>İzmir</option>
+      <option {% if   provienceId == 36  %}  {{ selected }} {% endif %} value=36>Kars</option>
+      <option {% if   provienceId == 37  %}  {{ selected }} {% endif %} value=37>Kastamonu</option>
+      <option {% if   provienceId == 38  %}  {{ selected }} {% endif %} value=38>Kayseri</option>
+      <option {% if   provienceId == 39  %}  {{ selected }} {% endif %} value=39>Kırklareli</option>
+      <option {% if   provienceId == 40  %}  {{ selected }} {% endif %} value=40>Kırşehir</option>
+      <option {% if   provienceId == 41  %}  {{ selected }} {% endif %} value=41>Kocaeli</option>
+      <option {% if   provienceId == 42  %}  {{ selected }} {% endif %} value=42>Konya</option>
+      <option {% if   provienceId == 43  %}  {{ selected }} {% endif %} value=43>Kütahya</option>
+      <option {% if   provienceId == 44  %}  {{ selected }} {% endif %} value=44>Malatya</option>
+      <option {% if   provienceId == 45  %}  {{ selected }} {% endif %} value=45>Manisa</option>
+      <option {% if   provienceId == 46  %}  {{ selected }} {% endif %} value=46>Kahramanmaraş</option>
+      <option {% if   provienceId == 47  %}  {{ selected }} {% endif %} value=47>Mardin</option>
+      <option {% if   provienceId == 48  %}  {{ selected }} {% endif %} value=48>Muğla</option>
+      <option {% if   provienceId == 49  %}  {{ selected }} {% endif %} value=49>Muş</option>
+      <option {% if   provienceId == 50  %}  {{ selected }} {% endif %} value=50>Nevşehir</option>
+      <option {% if   provienceId == 51  %}  {{ selected }} {% endif %} value=51>Niğde</option>
+      <option {% if   provienceId == 52  %}  {{ selected }} {% endif %} value=52>Ordu</option>
+      <option {% if   provienceId == 53  %}  {{ selected }} {% endif %} value=53>Rize</option>
+      <option {% if   provienceId == 54  %}  {{ selected }} {% endif %} value=54>Sakarya</option>
+      <option {% if   provienceId == 55  %}  {{ selected }} {% endif %} value=55>Samsun</option>
+      <option {% if   provienceId == 56  %}  {{ selected }} {% endif %} value=56>Siirt</option>
+      <option {% if   provienceId == 57  %}  {{ selected }} {% endif %} value=57>Sinop</option>
+      <option {% if   provienceId == 58  %}  {{ selected }} {% endif %} value=58>Sivas</option>
+      <option {% if   provienceId == 59  %}  {{ selected }} {% endif %} value=59>Tekirdağ</option>
+      <option {% if   provienceId == 60  %}  {{ selected }} {% endif %} value=60>Tokat</option>
+      <option {% if   provienceId == 61  %}  {{ selected }} {% endif %} value=61>Trabzon</option>
+      <option {% if   provienceId == 62  %}  {{ selected }} {% endif %} value=62>Tunceli</option>
+      <option {% if   provienceId == 63  %}  {{ selected }} {% endif %} value=63>Şanlıurfa</option>
+      <option {% if   provienceId == 64  %}  {{ selected }} {% endif %} value=64>Uşak</option>
+      <option {% if   provienceId == 65  %}  {{ selected }} {% endif %} value=65>Van</option>
+      <option {% if   provienceId == 66  %}  {{ selected }} {% endif %} value=66>Yozgat</option>
+      <option {% if   provienceId == 67  %}  {{ selected }} {% endif %} value=67>Zonguldak</option>
+      <option {% if   provienceId == 68  %}  {{ selected }} {% endif %} value=68>Aksaray</option>
+      <option {% if   provienceId == 69  %}  {{ selected }} {% endif %} value=69>Bayburt</option>
+      <option {% if   provienceId == 70  %}  {{ selected }} {% endif %} value=70>Karaman</option>
+      <option {% if   provienceId == 71  %}  {{ selected }} {% endif %} value=71>Kırıkkale</option>
+      <option {% if   provienceId == 72  %}  {{ selected }} {% endif %} value=72>Batman</option>
+      <option {% if   provienceId == 73  %}  {{ selected }} {% endif %} value=73>Şırnak</option>
+      <option {% if   provienceId == 74  %}  {{ selected }} {% endif %} value=74>Bartın</option>
+      <option {% if   provienceId == 75  %}  {{ selected }} {% endif %} value=75>Ardahan</option>
+      <option {% if   provienceId == 76  %}  {{ selected }} {% endif %} value=76>Iğdır</option>
+      <option {% if   provienceId == 77  %}  {{ selected }} {% endif %} value=77>Yalova</option>
+      <option {% if   provienceId == 78  %}  {{ selected }} {% endif %} value=78>Karabük</option>
+      <option {% if   provienceId == 79  %}  {{ selected }} {% endif %} value=79>Kilis</option>
+      <option {% if   provienceId == 80  %}  {{ selected }} {% endif %} value=80>Osmaniye</option>
+      <option {% if   provienceId == 81  %}  {{ selected }} {% endif %} value=81>Düzce</option>
+    </select>
+  </div>
+  <hr>
+  <div class="form-group">
+    <label>Takibe Başlangıç Tarihi</label>
+    <!-- <input type="age" class="form-control" name="age" id="age" required> -->
+    <br>
+    <input type="date" id="track" name="track" value="{{trackDate}}" placeholder="{{trackDate}}">
+  </div>
+  <hr>
+    <div class="form-group">
+      <label>Hasta İsmi </label>
+      <input type="text" class="form-control" value="{{name}}" placeholder="{{name}}" name="name" id="name" required>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label>Hasta Soyismi</label>
+      <input type="lastname" class="form-control"value="{{lastname}}" placeholder="{{lastname}}" name="lastname" id="lastname" required>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label>Hasta Telefon Numarası</label>
+      <input type="phonenumber" class="form-control" value="{{phonenumber}}" placeholder="{{phonenumber}}" name="phonenumber" id="phonenumber" required>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Hasta Email</label>
+      <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" value="{{email}}" placeholder="{{email}}" required>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label>Hasta Doğum Tarihi</label>
+      <!-- <input type="age" class="form-control" name="age" id="age" required> -->
+      <br>
+      <input type="date" id="birthday" name="birthday" placeholder="{{birthday}}" value="{{birthday}}">
+    </div>
+    <hr>
+    <div class="form-group">
+      <label>Hasta Cinsiyeti</label>
+      {% set selected="selected" %}
+      <select name='gender' class="form-control" selected="Kadın" required>
+        <option    {% if   gender == 'Erkek'  %}  {{ selected }} {% endif %} value="Erkek">Erkek</option>
+        <option    {% if   gender == 'Kadın'  %} {{ selected }} {% endif %} value="Kadın">Kadın</option>
+      </select>
+    </div>
+    <hr>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Hasta Tanısı : </label>
+      <hr>
+      <input type="diagnosisName" class="form-control" name="diagnosisName" id="diagnosisName" placeholder="{{diagnosisName}}" value="{{diagnosisName}}" required>
+      <br>
+      <hr>
+      <textarea name ="content"  class="form-control" id="exampleFormControlTextarea1" rows="3" required>
+        {{diagnosis}}
+      </textarea>
+    </div>
+    <hr>
+  <br>
+    <button type="submit" class="btn btn-primary">Hastayı Güncelle</button>
+    <br>
+    <br>
+    <br>
+  </form>
+
+{% endblock body %}
